@@ -14,7 +14,7 @@ export default async function handler(req, res) {
       return res.status(500).json({ error: 'GEMINI_API_KEY is not configured' });
     }
 
-    const model = process.env.GEMINI_MODEL || 'gemini-1.5-flash';
+    const model = process.env.GEMINI_MODEL || 'gemini-2.0-flash';
     let userContent = `User query: ${prompt}`;
     if (documentName) {
       userContent = `Document: ${documentName}\n${userContent}`;
